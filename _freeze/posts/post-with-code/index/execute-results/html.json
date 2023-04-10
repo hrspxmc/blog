@@ -1,0 +1,14 @@
+{
+  "hash": "6daba93e62b3f397ba356872a2d5d594",
+  "result": {
+    "markdown": "---\ntitle: \"Post With Code\"\nauthor: \"Bart Klimowski\"\ndate: \"2023-02-16\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\n\nThis is a post with executable code.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n\n\n\n```smalltalk\ndoSomethingWith: argumentObject\n    self size > 4 ifTrue: [^argumentObject sizeRelatingTo: self].\n```\n\n```lisp\n (defun csg-intersection-intersect-all (obj-a obj-b)\n   (lambda (ray)\n     (flet ((inside-p (obj) (lambda (d) (inside-p obj (ray-point ray d)))))\n       (merge 'fvector\n              (remove-if-not (inside-p obj-b) (intersect-all obj-a ray))\n              (remove-if-not (inside-p obj-a) (intersect-all obj-b ray))\n              #'<))))\n```\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
